@@ -246,16 +246,6 @@ GreatCircle.prototype.Arc = function(npoints,options) {
     return arc;
 };
 
-if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-  // nodejs
-  module.exports.Coord = Coord;
-  module.exports.Arc = Arc;
-  module.exports.GreatCircle = GreatCircle;
-
-} else {
-  // browser
-  var arc = {};
-  arc.Coord = Coord;
-  arc.Arc = Arc;
-  arc.GreatCircle = GreatCircle;
-}
+module.exports.Coord = Coord;
+module.exports = Arc;
+module.exports.GreatCircle = GreatCircle;
